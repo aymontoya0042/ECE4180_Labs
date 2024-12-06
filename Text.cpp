@@ -205,6 +205,15 @@ uLCD_4DGL::text_char(char c, char col, char row, int color) // draw a text char
   writeCOMMAND(command, 3);
 }
 
+// int
+// strlen(char *str) {
+//     int length = 0;
+//     while (str[length] != '\0') {
+//         length++;
+//     }
+//     return length;
+// }
+
 void
 uLCD_4DGL::text_string(
   char* s,
@@ -339,6 +348,10 @@ uLCD_4DGL::puts(char* s) // place string at current cursor position
 
   text_string(s, current_col, current_row, current_font, current_color);
 
+    // int length = 0;
+    // while (s[length] != '\0') {
+    //     length++;
+    // }
   current_col += strlen(s);
 
   if (current_col >= max_col) {

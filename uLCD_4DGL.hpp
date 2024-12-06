@@ -263,6 +263,7 @@ class uLCD_4DGL : public mbed::Stream
   void color(int);
   void putc(char);
   void puts(char*);
+//   int strlen(char*);
 
   int  media_init();
   void set_byte_address(int, int);
